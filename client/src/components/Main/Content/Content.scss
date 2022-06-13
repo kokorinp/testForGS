@@ -1,0 +1,10 @@
+@import "../../../const/const";
+
+.content{
+  background: $default-block-background;
+  padding: $indent $indent $indent 0;
+  margin: $indent $indent $indent 0;
+  width: calc(75% - #{2 * $indent} - 2px);
+  border: solid 1px #fafafa;
+  border-radius: 0.3rem;
+}

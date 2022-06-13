@@ -1,0 +1,25 @@
+@import "const/const";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: $default-font-family;
+  font-style: $default-font-style;
+  font-weight: $default-font-weight;
+  font-size: $default-font-size;
+  background: $default-background;
+  color: $default-color;
+}
+
+p, h1{
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  width: 100%;
+  min-height: 100vh;
+}
