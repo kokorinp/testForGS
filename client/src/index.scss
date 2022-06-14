@@ -12,9 +12,16 @@ html, body {
   font-size: $default-font-size;
   background: $default-background;
   color: $default-color;
+
+  display: flex;
+  justify-content: center;
 }
 
-p, h1{
+body{
+  max-width: 1000px;
+}
+
+p, h1, h5{
   margin: 0;
   padding: 0;
 }

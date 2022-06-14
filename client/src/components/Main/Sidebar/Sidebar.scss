@@ -1,19 +1,24 @@
 @import "../../../const/const";
-.sidebar{
+
+.sidebar {
   padding: $indent 0 $indent $indent;
   margin: $indent 0 $indent $indent;
   width: calc(25% - #{2 * $indent});
-  // border: solid 1px #fafafa;
-  // display: flex;
-}
 
-.sidebar__filter{
-  padding-top: 5rem;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+
+  &__filter {
+    padding-top: 5rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
 }
 
 .filter{
   background: $default-block-background;
+  padding: 2*$indent 2*$indent;
+
+  &__title{
+    padding: 2*$indent 2*$indent;
+  }
 }
