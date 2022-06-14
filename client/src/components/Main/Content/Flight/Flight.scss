@@ -1,0 +1,43 @@
+@import "../../../../const/const";
+
+.flight {
+  margin: 2*$indent;
+  padding: 0 2*$indent 2*$indent 2*$indent;
+
+  &:not(:first-child){
+    padding: 4*$indent 2*$indent;
+  }
+
+  &__header {
+    padding: $indent 4*$indent;
+  }
+
+  &__body {
+    padding: 0 2*$indent;
+  }
+
+  &__header {
+    background: $body-background-flight-header;
+    color: $body-color-text-flight-header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button{
+    background: $transfer-line-text-color;
+    color: $body-color-text-flight-header;
+    border: none;
+    width: 100%;
+    padding: 3*$indent;
+    //font-size: 1.1rem;
+    text-transform: uppercase;
+    &:hover{
+      cursor: pointer;
+    }
+    &:active {
+      background: darken($transfer-line-text-color, 10%);
+    }
+  }
+}

@@ -6,6 +6,8 @@ import State from '../../../types/state';
 import { flightsLoadAction } from '../../../actions/flights';
 import { FlightsState } from '../../../types/flights/state';
 import { ActionFunc } from '../../../types/action';
+import { ResponsMockAPIFlightWrapper } from '../../../types/api/mock';
+import Flight from './Flight/Flight';
 
 interface Props {
   flights: FlightsState;
@@ -13,7 +15,7 @@ interface Props {
 }
 
 function Content({ flights, loadFlights }: Props): ReactElement {
-  console.log(flights.flights);
+  // console.log(flights.flights);
 
   useEffect(() => {
     // console.log('Content did mount');
@@ -22,14 +24,17 @@ function Content({ flights, loadFlights }: Props): ReactElement {
 
   return (
     <div className="content">
-      <div className="content_c">
-        <p>
-          content content content content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-          doloribus explicabo fugiat incidunt ipsa laborum nemo nihil rem tenetur velit. Asperiores eos, fuga itaque
-          odio quidem repellendus sapiente vel veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Animi asperiores assumenda atque beatae cupiditate, dolor ducimus eius ipsum itaque mollitia odio odit omnis
-          quam quidem quod, rerum soluta velit voluptates!
-        </p>
+      <div className="content__flights flights">
+        {flights.flights.map((e: ResponsMockAPIFlightWrapper) => (
+          <Flight
+            flight={e.flight}
+            carrier={e.flight.carrier}
+            price={e.flight.price.total}
+            legs={e.flight.legs}
+            classParent="flights__item"
+            key={e.flightToken}
+          />
+        ))}
       </div>
     </div>
   );

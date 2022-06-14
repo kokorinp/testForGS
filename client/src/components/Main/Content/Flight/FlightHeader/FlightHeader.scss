@@ -1,0 +1,18 @@
+@import "../../../../../const/const";
+
+.flight-header {
+  &__price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__price {
+    font-size: 1.3rem;
+  }
+
+  &__price-descr {
+    font-size: 0.7rem;
+  }
+}

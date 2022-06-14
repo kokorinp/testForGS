@@ -1,0 +1,27 @@
+@import "../../../../../../const/const";
+
+.transfer-line {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 10*$indent;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid $default-background;
+  }
+
+  &:not(:empty)::before {
+    margin-right: .25em;
+  }
+
+  &:not(:empty)::after {
+    margin-left: .25em;
+  }
+
+  &__text{
+    color: $transfer-line-text-color;
+  }
+}
