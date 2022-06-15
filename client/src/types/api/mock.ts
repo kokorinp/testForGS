@@ -40,10 +40,13 @@ export interface ResponsMockAPIPrice {
   total: ResponsMockAPIPriceTotal;
 }
 
+export type ResponsMockAPICarriers = Array<ResponsMockAPICarrier>;
+
 export interface ResponsMockAPICarrier {
   airlineCode: string;
   caption: string;
   uid: string;
+  minPrice?: number;
 }
 
 export interface ResponsMockAPIFlight {
@@ -56,6 +59,7 @@ export interface ResponsMockAPIFlightWrapper {
   flightToken: string;
   hasExtendedFare: boolean;
   flight: ResponsMockAPIFlight;
+  show: boolean; // результат работы фильтра
 }
 
 export type ResponsMockAPIFlights = Array<ResponsMockAPIFlightWrapper>;

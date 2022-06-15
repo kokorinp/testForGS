@@ -1,4 +1,12 @@
-import { takeEvery, put, all, call, AllEffect, CallEffect, PutEffect } from 'redux-saga/effects';
+import {
+  takeEvery,
+  put,
+  // all,
+  call,
+  AllEffect,
+  CallEffect,
+  PutEffect,
+} from 'redux-saga/effects';
 import { FlightsAction } from '../types/flights/action';
 import { FLIGHTS_LOAD } from '../const/flights/actions';
 import Action from '../types/action';

@@ -1,10 +1,19 @@
-@import "../../../const/const";
+@import '../../../const/const';
 
-.content{
+.content {
   background: $default-block-background;
   padding: $indent $indent $indent 0;
   margin: $indent $indent $indent 0;
   width: calc(75% - #{2 * $indent} - 2px);
   border: solid 1px #fafafa;
   border-radius: 0.3rem;
+}
+
+.add-show-flights {
+  display: flex;
+  justify-content: center;
+  &__btn {
+    padding: $indent 20 * $indent;
+    font-size: 1.2rem;
+  }
 }

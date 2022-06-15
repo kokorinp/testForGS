@@ -77,5 +77,7 @@ module.exports = {
     'linebreak-style': 'off',
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/default-param-last': 'off',
+    'no-plusplus': 'off',
+    'no-restricted-syntax': ['off', 'ForOfStatement'],
   },
 };

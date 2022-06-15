@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import './Flight.scss';
 import {
   ResponsMockAPICarrier,
-  ResponsMockAPIFlight,
+  // ResponsMockAPIFlight,
   ResponsMockAPILegs,
   ResponsMockAPIPriceTotal,
 } from '../../../../types/api/mock';
@@ -10,14 +10,20 @@ import FlightHeader from './FlightHeader/FlightHeader';
 import FlightBody from './FlightBody/FlightBody';
 
 interface Props {
-  flight: ResponsMockAPIFlight;
+  // flight: ResponsMockAPIFlight;
   classParent: string;
   carrier: ResponsMockAPICarrier;
   price: ResponsMockAPIPriceTotal;
   legs: ResponsMockAPILegs;
 }
 
-function Flight({ flight, classParent, carrier, price, legs }: Props): ReactElement {
+function Flight({
+  // flight,
+  classParent,
+  carrier,
+  price,
+  legs,
+}: Props): ReactElement {
   // console.log(flight);
   // console.log(carrier);
   // console.log(price);
