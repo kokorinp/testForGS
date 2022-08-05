@@ -36,14 +36,18 @@ const flightsReducer = (state: FlightsState = initialState, action: FlightsActio
       case FLIGHTS_LOAD_SUCCESS: {
         return {
           ...draft,
-          flights: FlightsFilterDefault(action.flights || []),
-          carriers: LoadingCarriers(action.flights || []),
+          flights: FlightsFilterDefault(action.flights || initialState.flights),
+          carriers: LoadingCarriers(action.flights || initialState.flights),
         };
       }
 
       case FLIGHTS_SORT: {
         // return { ...draft, flights: FlightsSort([...draft.flights], action.sort || 1), sort: action.sort || 1 };
-        return { ...draft, flights: FlightsSort([...draft.flights], action.sort || 1), sort: action.sort || 1 };
+        return {
+          ...draft,
+          flights: FlightsSort([...draft.flights], action.sort || initialState.sort),
+          sort: action.sort || initialState.sort,
+        };
       }
 
       case FLIGHTS_FILTER_NO_TRANSFER: {
